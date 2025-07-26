@@ -1,7 +1,12 @@
+// jsconfig.json (in your project's root directory, i.e., next to package.json)
 {
   "compilerOptions": {
+    "baseUrl": ".", // This sets the base for resolving non-relative modules
     "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
+      "@/*": ["./src/*"] // This maps '@/...' to './src/...'
+    },
+    "jsx": "preserve"
+  },
+  "include": ["**/*.js", "**/*.jsx"], // Include all JS/JSX files
+  "exclude": ["node_modules"]
 }
